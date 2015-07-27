@@ -1,0 +1,26 @@
+<!doctype html>
+<!-- 
+    Author: Xan Gutierrez
+    Date: 2015-07-28
+-->
+<html data-ng-app="">
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+
+<body data-ng-init="customers=[{name: 'John Smith', city: 'Phoenix'}, {name: 'John Doe', city: 'New York'}, {name: 'Jane Doe', city: 'San Francisco'}]">
+
+  Name:
+    <br />
+    <input type="text" data-ng-model="name" /> {{name}}
+    <br />
+    <ul>
+        <li data-ng-repeat="cust in customers | filter:name | orderBy: 'city'">{{cust.name | uppercase}} - {{cust.city | lowercase}}</li>
+    </ul>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+</body>
+
+</html>
