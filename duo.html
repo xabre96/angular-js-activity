@@ -11,9 +11,11 @@
 </head>
 
 <body>
-    <div class="container">
-        Name:
-        <input type="text" ng-model="name" /> {{name}}
+    <div class="container" data-ng-init="names=['Dave','Napur','Heedy','Shriva']">
+        <h3>Looping with the ng-repeat Directive</h3>
+        <ul>
+            <li data-ng-repeat="name2 in names">{{name2}}</li>
+        </ul>
     </div>
 
     <script src="bower_components/angular/angular.min.js"></script>
