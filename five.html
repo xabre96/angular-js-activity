@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Creating a View and COntroller</title>
+</head>
+<body>
+    <div ng-controller="myController">
+        <h3>Adding a Simple Controller</h3>
+        <ul>
+            <li ng-repeat="cust in customers">
+                {{cust.name}} - {{cust.city}}
+            </li>
+        </ul>
+        {{yeah()}}
+    </div>
+    
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module('myApp', []);
+        
+        app.controller('myController', function ($scope) {
+            $scope.customers = [
+                {name: 'Xan', city: 'camiguin'},
+                {name: 'Nikki', city: 'el salvador'},
+                {name: 'Ali', city: 'camiguin'},
+                {name: 'Lita', city: 'manila'}
+            ];
+        });
+            
+    </script>
+    
+</body>
+</html>

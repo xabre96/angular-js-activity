@@ -1,0 +1,47 @@
+<!doctype html>
+<html data-ng-app="customersApp">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Customer Manager</title>
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="#/">
+                        People
+                    </a>
+                    <ul class="nav nav-pills" data-ng-controller="NavbarController">
+                        <li data-ng-class="{'active':getClass('/customers')}"><a href="#/customers">Customers</a></li>
+                        <li data-ng-class="{'active':getClass('/orders')}"><a href="#/orders">Orders</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div data-ng-view=""></div>
+        <div id="footer">
+            <div class="navbar navbar-fixed-bottom">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <footer>
+                            <div class="row">
+                                <div class="span4">
+                                    Created by Xan Gutierrez
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="app/app.js"></script>
+        <script src="app/controllers/controllers.js"></script>
+        <script src="app/services/customersService.js"></script>
+        <script src="app/directives/animatedView.js"></script>
+    </body>
+</html>
